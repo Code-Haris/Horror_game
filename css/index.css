@@ -1,0 +1,105 @@
+/*Haris Kravarevic*/
+body {
+  background: #000000;
+  color: #c95508;
+  font-family: 'Roboto Mono', monospace;
+}
+.container {
+  max-width: 70%;
+  width: 100%;
+  margin: 0 auto;
+}
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  line-height: 0;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home h1 {
+  text-align: center;
+}
+.home h2 {
+  font-size: 1.2rem;
+}
+.home input {
+  width: 100%;
+  border: 0;
+  background: #333;
+  color: #c95508;
+  font-family: 'Roboto Mono', monospace;
+}
+.home .input-area {
+  display: flex;
+  width: 100%;
+}
+.home .input-area p {
+  margin-right: 2%;
+}
+.home .is-hidden {
+  visibility: hidden;
+}
+.home #status-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+.home #status-area .audio-btn {
+  margin-top: 10px;
+  height: 30;
+  width: 80px;
+  border: 0;
+  background: rgba(255, 255, 255, 0);
+  color: #c95508;
+  cursor: pointer;
+}
+.home #intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: visible;
+}
+.home #player-creation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: visible;
+  text-align: center;
+}
+.home #play-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+  margin-top: 0;
+}
+.home #play-area ul {
+  margin-left: 3%;
+}

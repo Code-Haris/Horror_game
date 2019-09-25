@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta author="Haris Kravarevic" />
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="javascript/characters.js"></script>
+    <script type="text/javascript" src="javascript/rooms.js"></script>
+    <script type="text/javascript" src="javascript/engine.js"></script>
+
+    <title>ScaryGame</title>
+</head>
+<body>
+    <div class="container home">
+        <!-- <div id="intro">
+            <div id="console-text" class="game-info">
+                <p></p>
+            </div>
+        </div> -->
+        <div id="player-creation">
+            <div id="console-text1">
+            </div>
+            <div class="input-area is-hidden"><p class="caret">></p><input type="text" id="player-name" placeholder="Please type your name..."></input></div>
+        </div>
+        
+        <div id="play-area">
+            <div id="console-text" class="game-info">
+                <h1>Welcome to ScaryGame</h1>
+            </div>
+            <div class="input-area"><p class="caret">></p><input type="text" id="player-input" placeholder="Please type your command..."></input></div>
+            <div id="status-area">
+                <p id="status-moves">Moves: 1</p>
+                <button id="audio" class="audio-btn" onclick="typeWriter()">Mute</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

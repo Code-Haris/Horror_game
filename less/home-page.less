@@ -1,0 +1,80 @@
+.home {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    input {
+        width: 100%;
+        border: 0;
+        background:@bg-color;
+        color: @fg-color;
+        .font();
+    }
+
+    .input-area {
+        display: flex;
+        width: 100%;
+        p {
+            margin-right: 2%;
+        }
+    }
+
+    .is-hidden {
+        visibility: hidden;
+    }
+
+    #status-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: flex-end;
+
+        .audio-btn {
+            margin-top: 10px;
+            height: 30;
+            width: 80px;
+            border: 0;
+            background: rgba(255,255,255,0);
+            color: @fg-color;
+            cursor: pointer;
+        }
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        visibility: visible;
+    }
+
+    #player-creation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        visibility: visible;
+        text-align: center;
+    }
+
+    #play-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        visibility: hidden;
+        margin-top: 0;
+
+        ul {
+            margin-left: 3%;
+        }
+
+    }
+}
