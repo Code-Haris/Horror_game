@@ -258,7 +258,7 @@ function playerName(input) {
         // TODO: Refactor these appends
         exportText(`<p>You are <b>${player.name}</b> </p>`);
         $('#player-name').attr('placeholder','Please type your command...');
-        setTimeout(function() {exportText(`<p>Type start to start the game.</p>`);}, 1000);
+        setTimeout(function () { exportText(`<p>If you dare type start to start the game. &#128540;</p>`);}, 1000);
         return;
     }
 
@@ -284,15 +284,21 @@ function toggleAudio() {
 }
 
 function intro() {
-    exportText('<p>You are going to your girlfriend and speak on the phone</p>'); 
-    setTimeout(function() {exportText('<p>Yeah... you heard me well, you have a girlfriend</p>');}, 1000);
-    setTimeout(function() {exportText('<p>The echo of your voice relays down the halway, scaring the nearby</p>');}, 1000);
-    setTimeout(function() {exportText('<p>animals.</p>');}, 1000);
-    setTimeout(function() {exportText('<h1>Welcome To ScaryGame</h1>');}, 12000);
-    setTimeout(function() {exportText('<p>This is a Interactive Horror.</p>');}, 2000);
-    setTimeout(function() {exportText('<p>Copyright (c) 2019 by Haris Kravarevic</p>');}, 1000);
-    setTimeout(function() {document.querySelector('#player-name').style.visibility = 'visible';}, 1000);
-    setTimeout(function() {document.querySelector('.caret').style.visibility = 'visible';}, 1000);
+    exportText('<p>Let me start by saying that was addicted to heroin.</p>'); 
+    setTimeout(function () { exportText('<p>We were friends in college and continued to be after I graduated</p>');}, 300);
+    setTimeout(function () { exportText('<p>Notice that I said "I".</p>');}, 400);
+    setTimeout(function () { exportText('<p>Friend dropped out after two years of barely cutting it.</p>'); }, 500);
+    setTimeout(function () { exportText('<p> After I moved out of the dorms and into a small apartment,</p>'); }, 600);
+    setTimeout(function () { exportText('<p> I didnt see my friend as much.</p>'); }, 700);
+    setTimeout(function () { exportText('<p> We would talk online every now and then (AIM was king in pre-Facebook years).</p>'); }, 800);
+    setTimeout(function () { exportText('<p>There was a period where he wasnt online for about five weeks straight.</p>'); }, 900);
+    setTimeout(function () { exportText('<p>I wasnt worried</p>'); }, 1000);
+    setTimeout(function () { exportText('<p>He was a pretty notorious flake and drug addict, so I assumed he just stopped caring.</p>'); }, 1100);
+    setTimeout(function () { exportText('<h1>Welcome To NoEnd House</h1>'); }, 1300);
+    setTimeout(function () { exportText('<p>Copyright (c) 2019 by Haris Kravarevic, Sabastian Malcher, Mohammed Faraman</p>'); }, 1400);
+    setTimeout(function () { exportText('<p> Commands in the game ["go[direction]", "pickup[item]", "examine", "equipment"]</p>'); }, 1600);
+    setTimeout(function() {document.querySelector('#player-name').style.visibility = 'visible';}, 1500);
+    setTimeout(function() {document.querySelector('.caret').style.visibility = 'visible';}, 1500);
 }
 
 /**

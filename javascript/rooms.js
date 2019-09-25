@@ -37,37 +37,62 @@ class Room {
 const rooms = [
     start = new Room ({
         'name': 'start',
-        'description': '<p>You heard something and you are scared. Go to creepy building <b>left</b> or <b>foward</b></p>',
+        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><p>"go read" or "go leave"',
+        'examineDescription': '<p>Read Message</p>',
+        'directions': {
+            'read': 'reading_message',
+            'leave': 'leave_it'
+        },
+        'items': [],
+        'npcs': {}
+    }),
+    
+    reading_message = new Room ({
+        'name': 'reading_messagee',
+        'description': '<p>"We need to talk." </p><br><p>"go continue" or "go leave"</p>',
         'examineDescription': '<p></p>',
         'directions': {
-            'left': 'building1',
-            'foward': 'foward1'
+            'continue': 'Lets_Talk',
+            'leave': 'leave it'
         },
         'items': [],
         'npcs': {}
     }),
     
-    building1 = new Room ({
-        'name': 'building1',
-        'description': '<p>You entered in some creepy Building, search first floor, basemant</b>. </p>',
-        'examineDescription': '<p>You looked around the room but did not find anything.</p>',
+    Lets_Talk = new Room ({
+        'name': 'Lets_Talk',
+        'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br><p>"go goto" or "go not"</p>',
+        'examineDescription': '<p></p>',
         'directions': {
-            'first': 'first_floor',
-            'basemant': 'basemant1'
+            'goto': 'leave_house',
+            'not': '#'
         },
         'items': [],
         'npcs': {}
     }),
-    
-    foward1 = new Room ({
-        'name': 'foward1',
-        'description': '<p> You start to run and You see a women running <b>follow</b> , <b>anotherway</b>. </p>',
-        'examineDescription': '<p>You looked around the room but did not find anything.</p>',
+    leave_house = new Room({
+        'name': 'leave_house',
+        'description': '<p>When I arrived, I immediately noticed something strange about the building.</p><br><p>Have you ever seen or read something that shouldnt be scary, but for some reason a chill crawls up your spine?</p><br><p>I walked toward the building </p>',
+        'examineDescription': '',
         'directions': {
-            'follow': 'follow_woman',
-            'anotherway': 'another_way'
+            'opendoor': 'open_door',
+            'leavenow': 'leave_now',
+            'round': 'look_around',
         },
         'items': [],
         'npcs': {}
-    })
+    }),
+
+    look_around = new Room({
+        'name': 'look_around',
+        'description': '<p>When I arrived, I immediately noticed something strange about the building.</p><br><p>Have you ever seen or read something that shouldnt be scary, but for some reason a chill crawls up your spine?</p><br><p>I walked toward the building </p>',
+        'examineDescription': '',
+        'directions': {
+            'opendoor': 'open_door',
+            'leavenow': 'leave_now',
+            'lookaround': 'look_around',
+        },
+        'items': [],
+        'npcs': {}
+    }),
 ];
