@@ -37,7 +37,7 @@ class Room {
 const rooms = [
     start = new Room ({
         'name': 'start',
-        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><br><b>Commands:</b><br><p>go read it</p><br><p>go will not</p>',
+        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><br><b>Commands:</b><br><p>go read it</p><br><p>go will not</p><br><p>examine<p>',
         'examineDescription': '<p>You have new message</p>',
         'directions': {
             'read it': 'reading_message',
@@ -46,10 +46,21 @@ const rooms = [
         'items': [],
         'npcs': {}
     }),
+
+    leave_it = new Room({
+        'name': 'leave_it',
+        'description': '<p>You dont want to read the message, but you are interested what friend want </p><br><br><b>Commands:</b><br><p>go read it</p><br><p>examine</p>',
+        'examineDescription': '<p>You need money, but what friend want after all these years?</p>',
+        'directions': {
+            'readit': 'reading_messagee',
+        },
+        'items': [],
+        'npcs': {}
+    }),
     
     reading_message = new Room ({
         'name': 'reading_messagee',
-        'description': '<p>"We need to talk." </p><br><br><b>Commands:</b><br><p>go continue</p><br><p>go will not</p>',
+        'description': '<p>"We need to talk." </p><br><br><b>Commands:</b><br><p>go continue</p><br><p>go will not</p><br><p>examine</p>',
         'examineDescription': '<p>Old friend wanna to talk with you</p>',
         'directions': {
             'continue': 'Lets_Talk',
@@ -62,10 +73,21 @@ const rooms = [
     Lets_Talk = new Room ({
         'name': 'Lets_Talk',
         'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br><br><b>Commands</b><br><p>go go to</p><br><p>go no way</p><br><p>examine</p>',
-        'examineDescription': '<p>Friend explain solution for extra money</p>',
+        'examineDescription': '<p>Friend explain solution for extra money and you need it</p>',
         'directions': {
             'goto': 'leave_house',
-            'noway': '#'
+            'noway': 'no_way'
+        },
+        'items': [],
+        'npcs': {}
+    }),
+    no_way = new Room({
+        'name': 'no_way',
+        'description': '<p>You are too scared already??</p><br><br><b>Commands:</b><br><p>go to house</p><br><p>start over</p>',
+        'examineDescription': '<p>...</p>',
+        'directions': {
+            'tohouse': 'leave_house',
+            'start': 'start'
         },
         'items': [],
         'npcs': {}
