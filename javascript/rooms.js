@@ -37,11 +37,11 @@ class Room {
 const rooms = [
     start = new Room ({
         'name': 'start',
-        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><br><b>Commands:</b><br><p>go read</p><br><p>go leave</p>',
+        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><br><b>Commands:</b><br><p>go read it</p><br><p>go will not</p>',
         'examineDescription': '<p>You have new message</p>',
         'directions': {
-            'read': 'reading_message',
-            'leave': 'leave_it'
+            'readit': 'reading_message',
+            'willnot': 'leave_it'
         },
         'items': [],
         'npcs': {}
@@ -49,11 +49,11 @@ const rooms = [
     
     reading_message = new Room ({
         'name': 'reading_messagee',
-        'description': '<p>"We need to talk." </p><br><br><b>Commands:</b><br><p>go continue</p><br><p>go leave</p>',
+        'description': '<p>"We need to talk." </p><br><br><b>Commands:</b><br><p>go continue</p><br><p>go will not</p>',
         'examineDescription': '<p>Old friend wanna to talk with you</p>',
         'directions': {
             'continue': 'Lets_Talk',
-            'leave': 'leave it'
+            'willnot': 'leave it'
         },
         'items': [],
         'npcs': {}
@@ -61,7 +61,7 @@ const rooms = [
     
     Lets_Talk = new Room ({
         'name': 'Lets_Talk',
-        'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br><br><b>Commands</b><br><p>go goto</p><br><p>go noway</p><br><p>examine</p>',
+        'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br><br><b>Commands</b><br><p>go go to</p><br><p>go no way</p><br><p>examine</p>',
         'examineDescription': '<p>Friend explain solution for extra money</p>',
         'directions': {
             'goto': 'leave_house',
@@ -72,7 +72,7 @@ const rooms = [
     }),
     leave_house = new Room({
         'name': 'leave_house',
-        'description': '<p>I arrived, what now?</p><br><p><b>Commands:</b></p><br><p>opendoor</p><br><p>leavenow</p><br><p>round</p><br><p>examine</p>',
+        'description': '<p>I arrived, what now?</p><br><p><b>Commands:</b></p><br><p>open door</p><br><p>leave now</p><br><p>round</p><br><p>examine</p>',
         'examineDescription': '<p>Noticed something strange about the building.</p><br><p>Have you ever seen or read something that shouldnt be scary, but for some reason</p><br><p> a chill crawls up your spine?</p><br></p>',
         'directions': {
             'opendoor': 'opening_door',
@@ -85,7 +85,7 @@ const rooms = [
 
     opening_door = new Room({
         'name': 'opening_door',
-        'description': '<p>I opened the front door.</p><br><p><b>Commands:</b></p><p>examine</p><br><p>go firstfloor</p><br><p>go sign</p>',
+        'description': '<p>I opened the front door.</p><br><p><b>Commands:</b></p><p>examine</p><br><p>go first floor</p><br><p>go sign</p>',
         'examineDescription': '<p>The room looked like a normal hotel lobby decorated for Halloween.</p><br><p>A sign was posted in place of a worker.</p>',
         'directions': {
             'firstfloor': 'going_to_first_floor',

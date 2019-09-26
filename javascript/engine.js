@@ -8,6 +8,7 @@ var i = 0;
 var txt = 'Lorem ipsum typing effect!';
 speed = 50;
 
+
 function typeWriter() {
     if (i < txt.length) {
     // document.getElementById("console-text").innerHTML += txt.charAt(i);
@@ -21,6 +22,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+
 
 /**
  * Appends the game's text onto the DOM elements
@@ -215,13 +217,16 @@ function showEquipment() {
  */
 function playerInput(input) {
     const command = input.split(' ')[0];
+    console.log(command)
 
     player.moves =+ 1;
     $('#status-moves').text(`Moves: ${player.moves}`);
 
     switch(command) {
         case 'go':
-            const dir = input.split(' ')[1];
+            //const dir = input.split(" ")[1];
+            dir = input.split(" ")[1] + input.split(" ")[2]
+            console.log(dir)
             changeRoom(dir);
         break;
         case 'help':
