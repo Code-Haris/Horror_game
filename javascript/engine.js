@@ -71,7 +71,7 @@ function changeRoom(dir) {
  * Show the help menu
  */
 function showHelp() {
-    exportLog('<p><b>Here is the help: </b></p>');
+    exportLog('<p><b>Here is the help: </b></p><br><br><p>go [direction]</p><br><p>pickup [item]</p><br><p>examine</p><br><p>equipment</p>');
     exportLog('<p><ul>');
     for (let i = 0; i < commands.length; i++) {
         exportLog(`<li> ${commands[i]} </li>`);
