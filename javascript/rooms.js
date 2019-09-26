@@ -94,12 +94,11 @@ const rooms = [
     }),
     leave_house = new Room({
         'name': 'leave_house',
-        'description': '<p>I arrived, what now?</p><br><br><p><hr><b>Commands:</b><hr></p><br><p>open door</p><br><p>leave now</p><br><p>round</p><br><p>examine</p><hr>',
+        'description': '<p>I arrived, what now?</p><br><br><p><hr><b>Commands:</b><hr></p><br><p>go open door</p><br><p>go leave now</p><br><p>examine</p><hr>',
         'examineDescription': '<p>Noticed something strange about the building.</p><br><p>Have you ever seen or read something that shouldnt be scary, but for some reason</p><br><p> a chill crawls up your spine?</p><br></p>',
         'directions': {
             'open door': 'opening_door',
             'leave now': 'leaving',
-            'round': 'look_around',
         },
         'items': [],
         'npcs': {}
