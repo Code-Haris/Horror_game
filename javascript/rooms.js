@@ -41,7 +41,7 @@ const rooms = [
         'examineDescription': '<p>You have new message</p>',
         'directions': {
             'read it': 'reading_message',
-            'willnot': 'leave_it'
+            'will not': 'leave_it'
         },
         'items': [],
         'npcs': {}
@@ -52,7 +52,7 @@ const rooms = [
         'description': '<p>You dont want to read the message, but you are interested what friend want </p><br><br><b>Commands:</b><br><p>go read it</p><br><p>examine</p>',
         'examineDescription': '<p>You need money, but what friend want after all these years?</p>',
         'directions': {
-            'readit': 'reading_messagee',
+            'read it': 'reading_messagee',
         },
         'items': [],
         'npcs': {}
@@ -64,7 +64,7 @@ const rooms = [
         'examineDescription': '<p>Old friend wanna to talk with you</p>',
         'directions': {
             'continue': 'Lets_Talk',
-            'willnot': 'leave it'
+            'will not': 'leave it'
         },
         'items': [],
         'npcs': {}
@@ -75,8 +75,8 @@ const rooms = [
         'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br><br><b>Commands</b><br><p>go go to</p><br><p>go no way</p><br><p>examine</p>',
         'examineDescription': '<p>Friend explain solution for extra money and you need it</p>',
         'directions': {
-            'goto': 'leave_house',
-            'noway': 'no_way'
+            'go to': 'leave_house',
+            'no way': 'no_way'
         },
         'items': [],
         'npcs': {}
@@ -86,7 +86,7 @@ const rooms = [
         'description': '<p>You are too scared already??</p><br><br><b>Commands:</b><br><p>go to house</p><br><p>start over</p>',
         'examineDescription': '<p>...</p>',
         'directions': {
-            'tohouse': 'leave_house',
+            'to house': 'leave_house',
             'start': 'start'
         },
         'items': [],
@@ -97,8 +97,8 @@ const rooms = [
         'description': '<p>I arrived, what now?</p><br><p><b>Commands:</b></p><br><p>open door</p><br><p>leave now</p><br><p>round</p><br><p>examine</p>',
         'examineDescription': '<p>Noticed something strange about the building.</p><br><p>Have you ever seen or read something that shouldnt be scary, but for some reason</p><br><p> a chill crawls up your spine?</p><br></p>',
         'directions': {
-            'opendoor': 'opening_door',
-            'leavenow': 'leaving',
+            'open door': 'opening_door',
+            'leave now': 'leaving',
             'round': 'look_around',
         },
         'items': [],
@@ -110,7 +110,7 @@ const rooms = [
         'description': '<p>I opened the front door.</p><br><p><b>Commands:</b></p><p>examine</p><br><p>go first floor</p><br><p>go sign</p>',
         'examineDescription': '<p>The room looked like a normal hotel lobby decorated for Halloween.</p><br><p>A sign was posted in place of a worker.</p>',
         'directions': {
-            'firstfloor': 'going_to_first_floor',
+            'first floor': 'going_to_first_floor',
             'sign': 'reading_sign',
         },
         'items': [],
@@ -121,7 +121,7 @@ const rooms = [
         'description': '<p>Read the sign</p><br><p><b>Commands:</b></p><p>"examine"</p><br><p> "go opendoor"</p>',
         'examineDescription': '<p>"Room 1 this way. Eight more follow. Reach the end and you win!"</p>',
         'directions': {
-            'opendoor': 'opening_door',
+            'open door': 'opening_door',
         },
         'items': [],
         'npcs': {}
