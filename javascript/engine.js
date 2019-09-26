@@ -216,8 +216,13 @@ function showEquipment() {
  * @param  {} input
  */
 function playerInput(input) {
-    const command = input.split(' ')[0];
+    let arr = input.split(' ')
+    console.log(arr)
+    let a, rest
+    [a, ...rest] = arr
+    const command = a
     console.log(command)
+    const direction = rest.join(' ')
 
     player.moves =+ 1;
     $('#status-moves').text(`Moves: ${player.moves}`);
@@ -225,7 +230,7 @@ function playerInput(input) {
     switch(command) {
         case 'go':
             //const dir = input.split(" ")[1];
-            dir = input.split(" ")[1] + input.split(" ")[2]
+            dir = direction
             console.log(dir)
             changeRoom(dir);
         break;

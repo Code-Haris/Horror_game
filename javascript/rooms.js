@@ -40,7 +40,7 @@ const rooms = [
         'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><br><b>Commands:</b><br><p>go read it</p><br><p>go will not</p>',
         'examineDescription': '<p>You have new message</p>',
         'directions': {
-            'readit': 'reading_message',
+            'read it': 'reading_message',
             'willnot': 'leave_it'
         },
         'items': [],
