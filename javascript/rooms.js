@@ -158,10 +158,92 @@ const rooms = [
     }),
         next_room = new Room({
         'name': 'next_room',
-        'description': '<p> Logic overtook me after a few terrified moments, and I shook it off and entered the next room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go next room"</p><hr>',
-        'examineDescription': '<p style="color: #0357ff;">Room three is when things began to change.</p><br>',
+        'description': '<p> Logic overtook me after a few terrified moments, and I shook it off and entered the next room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go search"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">I did not want to open that door. A feeling of dread hit me so hard I could barely even think.</p><br>',
 		 'directions': {
             'next room': 'next_room',
+            'search': 'search_something1'
+        },
+        'items': [],
+        'npcs': {}
+    }),
+        search_something1 = new Room({
+        'name': 'search_something1',
+        'description': '<p> On the surface, it looked like a normal room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go deep search"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">There was a chair in the middle of the wood paneled floor.</p><br><p style="color: #0357ff;"> A single lamp in the corner did a poor job of lighting the area, casting a few shadows across the floor and walls.</p><br><p style="color: #0357ff;">That was the problem. Shadows. Plural.</p><br>',
+		 'directions': {
+            'deep search': 'deep_search',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+        deep_search = new Room({
+        'name': 'deep_search',
+        'description': '<p> With the exception of the chair`s, there were others.</p><br><p> I had barely walked in the door and I was already terrified.</p><br><p>I know something wasn`t right.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go open door1"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">There is a door, what is with this door?</p><br>',
+		 'directions': {
+            'open door1': 'open_door1',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+        open_door1 = new Room({
+        'name': 'open_door1',
+        'description': '<p>I tried to open the door I came through. It was locked from the other side.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go think"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">That set me off. Was someone locking the doors as I progressed?</p><br><p style="color: #0357ff;">There was no way. I would have heard them</p>',
+		 'directions': {
+            'think': 'think_now',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+        think_now = new Room({
+        'name': 'think_now',
+        'description': '<p>Was it a mechanical lock that set automatically? Maybe.</p><br><p>But I was too scared to really think.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go turn back"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">I`m scared I want back!</p>',
+		 'directions': {
+            'turn back': 'turn_back',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+         turn_back = new Room({
+        'name': 'turn_back',
+        'description': '<p> I turned back to the room and the shadows were gone.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go walk around"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">The chair`s shadow remained, but the others were gone.</p>',
+		 'directions': {
+            'walk around': 'walk_around',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+         walk_around = new Room({
+        'name': 'walk_around',
+        'description': '<p>slowly began to walk.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go walk more"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;"> I used to hallucinate when I was a kid,</p><br><p style="color: #0357ff;">so I wrote off the shadows as a figment of my imagination.</p><br><p style="color: #0357ff;"> I began to feel better as I made it to the halfway point of the room.</p>',
+		 'directions': {
+            'walk more': 'walk_more',
+        },
+        'items': [],
+        'npcs': {}
+        walk_more = new Room({
+        'name': 'walk_more',
+        'description': '<p> I looked down as I took my steps and that`s when I saw it.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p>',
+		 'directions': {
+            'run': 'run_to_door',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+
+        //Came to here with the story
+         run_to_door = new Room({
+        'name': 'run_to_door',
+        'description': '<p> I looked down as I took my steps and that`s when I saw it.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p>',
+		 'directions': {
+            'run': 'run_to_door',
         },
         'items': [],
         'npcs': {}
