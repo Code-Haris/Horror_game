@@ -309,8 +309,6 @@ function intro() {
     setTimeout(function () { exportText('<h1>Welcome To NoEnd House</h1>'); }, 1300);
     setTimeout(function () { exportText('<p style="color: #0bd9e0;">Developed by </p><br><p style="color: #02fa86;"> Haris Kravarevic, Sabastian Malcher, Mohammed Faraman, László Sándor</p><br><p style="color: #0bd9e0;">Copyright (c) 2019</p>'); }, 1400);
     setTimeout(function () { exportText('<p> Commands in the game ["go[direction]", "pickup[item]", "examine", "equipment"]</p>'); }, 1600);
-     setTimeout(function () { exportText(''); }, 1600);
-
     setTimeout(function() {document.querySelector('#player-name').style.visibility = 'visible';}, 1500);
     setTimeout(function() {document.querySelector('.caret').style.visibility = 'visible';}, 1500);
 }

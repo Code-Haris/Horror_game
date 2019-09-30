@@ -222,12 +222,13 @@ const rooms = [
         'description': '<p>slowly began to walk.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go walk more"</p><hr>',
         'examineDescription': '<p style="color: #0357ff;"> I used to hallucinate when I was a kid,</p><br><p style="color: #0357ff;">so I wrote off the shadows as a figment of my imagination.</p><br><p style="color: #0357ff;"> I began to feel better as I made it to the halfway point of the room.</p>',
 		 'directions': {
-            'walk more': 'walk_more',
+             'walk more': 'walking_more',
         },
         'items': [],
-        'npcs': {}
-        walk_more = new Room({
-        'name': 'walk_more',
+             'npcs': {}
+         }),
+        walking_more = new Room({
+        'name': 'walking_more',
         'description': '<p> I looked down as I took my steps and that`s when I saw it.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
         'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p>',
 		 'directions': {
