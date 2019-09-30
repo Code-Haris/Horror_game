@@ -294,7 +294,9 @@ function toggleAudio() {
 }
 
 function intro() {
-    exportText('<p>Let me start by saying that was addicted to heroin.</p>'); 
+    exportText('<p style="font-size:150px;color:red">&#9760;</p>'); 
+    setTimeout(function () { exportText('<p>Let me start by saying that was addicted to heroin.</p>');}, 300);
+    setTimeout(function () { exportText('<p>We were friends in college and continued to be after I graduated</p>');}, 300);
     setTimeout(function () { exportText('<p>We were friends in college and continued to be after I graduated</p>');}, 300);
     setTimeout(function () { exportText('<p>Notice that I said "I".</p>');}, 400);
     setTimeout(function () { exportText('<p>Friend dropped out after two years of barely cutting it.</p>'); }, 500);
@@ -307,6 +309,8 @@ function intro() {
     setTimeout(function () { exportText('<h1>Welcome To NoEnd House</h1>'); }, 1300);
     setTimeout(function () { exportText('<p style="color: #0bd9e0;">Developed by </p><br><p style="color: #02fa86;"> Haris Kravarevic, Sabastian Malcher, Mohammed Faraman, László Sándor</p><br><p style="color: #0bd9e0;">Copyright (c) 2019</p>'); }, 1400);
     setTimeout(function () { exportText('<p> Commands in the game ["go[direction]", "pickup[item]", "examine", "equipment"]</p>'); }, 1600);
+     setTimeout(function () { exportText(''); }, 1600);
+
     setTimeout(function() {document.querySelector('#player-name').style.visibility = 'visible';}, 1500);
     setTimeout(function() {document.querySelector('.caret').style.visibility = 'visible';}, 1500);
 }
