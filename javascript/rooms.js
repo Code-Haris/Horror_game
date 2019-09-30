@@ -106,11 +106,12 @@ const rooms = [
 
     opening_door = new Room({
         'name': 'opening_door',
-        'description': '<p>I opened the front door.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>examine</p><br><p>go first floor</p><br><p>go sign</p><hr>',
+        'description': '<p>I opened the front door.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>examine</p><br><p>go first floor</p><br><p>go sign</p><br><p>check more</p><hr>',
         'examineDescription': '<p style="color: #0357ff;">The room looked like a normal hotel lobby decorated for Halloween.</p><br><p style="color: #0357ff;">A sign was posted in place of a worker.</p>',
         'directions': {
             'first floor': 'going_to_first_floor',
             'sign': 'reading_sign',
+            'check more': 'check_more',
         },
         'items': [],
         'npcs': {}
@@ -127,7 +128,7 @@ const rooms = [
     }),
     check_more = new Room({
         'name': 'check_more',
-        'description': '<p>The decor resembled the Halloween aisle of a K-Mart,</p><br><p>complete with sheet ghosts and animatronic zombies that gave a static growl when you passed by.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go exit door"</p><br><p>go check more</p><hr>',
+        'description': '<p>The decor resembled the Halloween aisle of a K-Mart,</p><br><p>complete with sheet ghosts and animatronic zombies that gave a static growl when you passed by.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go exit door"</p><hr>',
         'examineDescription': '<p style="color: #0357ff;">Nothing new here</p>',
         'directions': {
             'exit door': 'exit_door',
@@ -138,7 +139,7 @@ const rooms = [
     exit_door = new Room({
         'name': 'exit_door',
         'description': '<p>brushed through the fake spider webs and headed for the second room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go second room"</p><hr>',
-        'examineDescription': '<p style="color: #0357ff;">Nothing interesting here</p>',
+        'examineDescription': '<p style="color: #0357ff;">Nothing interesting here</p><br><p style="color: #0357ff;">I didn`t see a stereo, but I guessed they must have used a PA system</p>',
         'directions': {
             'second room': 'second_room',
         },
@@ -147,10 +148,20 @@ const rooms = [
     }),
     second_room = new Room({
         'name': 'second_room',
-        'description': '<p>You were greeted by fog as I opened the door to room two.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go second room"</p><hr>',
-        'examineDescription': '<p style="color: #0357ff;">The room definitely upped the ante in terms of technology.</p><br><p style="color: #0357ff;">Not only was there a fog machine,</p><br><p style="color: #0357ff;">but a bat hung from the ceiling and flew in a circle. Scary.</p><br><p style="color: #0357ff;">They seemed to have a Halloween soundtrack that one</p><br><p style="color: #0357ff;"> would find in a 99 cent store on loop somewhere in the room.</p>',
-        'directions': {
-            '#': '#',
+        'description': '<p>I reached for the doorknob and my heart sank to my knees.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go next room"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">I did not want to open that door. A feeling of dread hit me so hard I could barely even think.</p><br>',
+		 'directions': {
+            'next room': 'next_room',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+        next_room = new Room({
+        'name': 'next_room',
+        'description': '<p> Logic overtook me after a few terrified moments, and I shook it off and entered the next room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go next room"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">Room three is when things began to change.</p><br>',
+		 'directions': {
+            'next room': 'next_room',
         },
         'items': [],
         'npcs': {}
