@@ -72,7 +72,7 @@ const rooms = [
     
     Lets_Talk = new Room ({
         'name': 'Lets_Talk',
-        'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br> I would like to <b>go to</b> and try but maybe I`m too scared and <b>will not</b> ',
+        'description': '<p> That was when friend told me about the <b>NoEnd House</b> </p><br><p>It got that name because no one had ever reached the final exit.</p><br><p>The rules were pretty simple and cliche: reach the final room of the building and you win &euro;500.</p><br><p>There were nine rooms in all.</p><br><p>I would like to <b>go to</b> and try but maybe I`m too scared and <b>will not</b></p> ',
         'examineDescription': '<p style="color: #0357ff;">Friend explain solution for extra money and you need it</p>',
         'directions': {
             'go to': 'leave_house',
