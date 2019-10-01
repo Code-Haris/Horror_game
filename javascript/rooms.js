@@ -173,7 +173,7 @@ const rooms = [
     second_room = new Room({
         'name': 'second_room',
         'description': '<p>I reached for the doorknob and my heart sank to my knees.</p><br>',
-        'examineDescription': '<p style="color: #0357ff;">I did not want to open that <b>second room</b> door. A feeling of dread hit me so hard I could barely even think.</p><br>',
+        'examineDescription': '<p style="color: #0357ff;">I did not want to open that <b>next room</b> door.</p><br><p style="color: #0357ff;">A feeling of dread hit me so hard I could barely even think.</p><br>',
 		 'directions': {
             'next room': 'next_room',
         },
