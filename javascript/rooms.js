@@ -37,7 +37,7 @@ class Room {
 const rooms = [
     start = new Room ({
         'name': 'start',
-        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><hr><br><br><b style="color: #02fa86;">Commands:</b><hr><br><p>go read it</p><br><p>go will not</p><br><p>examine<p><hr>',
+        'description': '<p>Then one night I saw friend log on. </p><br><p>Before I could initiate a conversation, friend sent me a message.</p><br><p>Shell I <b>read it</b> or <b>will not</b>?',
         'examineDescription': '<p style="color: #0357ff;">You have new message</p>',
         'directions': {
             'read it': 'reading_message',
@@ -49,7 +49,7 @@ const rooms = [
 
     leave_it = new Room({
         'name': 'leave_it',
-        'description': '<p>You dont want to read the message, but you are interested what friend want </p><hr><br><br><b style="color: #02fa86;">Commands:</b><hr><br><p>go read it</p><br><p>examine</p><hr>',
+        'description': '<p>You dont want to read the message, but you are interested what friend want </p><br>and you should <b>read it</b>',
         'examineDescription': '<p style="color: #0357ff;">You need money, really fast, you have unpaid invoices :D</p>',
         'directions': {
             'read it': 'reading_messagee',
@@ -60,7 +60,7 @@ const rooms = [
     
     reading_message = new Room ({
         'name': 'reading_messagee',
-        'description': '<p>"We need to talk." </p><hr><br><br><b style="color: #02fa86;">Commands:</b><hr><br><p>go continue</p><br><p>go will not</p><br><p>examine</p><hr>',
+        'description': '<p>"We need to talk." </p><br><p>hmm I don`t know should I <b>continue</b> or <b>will not</b>',
         'examineDescription': '<p style="color: #0357ff;">Old friend wanna to talk with you</p>',
         'directions': {
             'continue': 'Lets_Talk',
