@@ -50,7 +50,7 @@ const rooms = [
     leave_it = new Room({
         'name': 'leave_it',
         'description': '<p>You dont want to read the message, but you are interested what friend want </p><hr><br><br><b style="color: #02fa86;">Commands:</b><hr><br><p>go read it</p><br><p>examine</p><hr>',
-        'examineDescription': '<p style="color: #0357ff;">You need money, but what friend want after all these years?</p>',
+        'examineDescription': '<p style="color: #0357ff;">You need money, really fast, you have unpaid invoices :D</p>',
         'directions': {
             'read it': 'reading_messagee',
         },
@@ -127,6 +127,19 @@ const rooms = [
         'items': [],
         'npcs': {}
     }),
+
+    going_to_first_floor = new Room({
+        'name': 'going_to_first_floor',
+        'description': '<p>You cannot go to first floor at this moment</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>examine</p><br><p>go sign</p><br><p>check more</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;"></p><br><p style="color: #0357ff;">A sign was posted in place of a worker.</p>',
+        'directions': {
+            'sign': 'reading_sign',
+            'check more': 'check_more',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+
     reading_sign = new Room({
         'name': 'reading_sign',
         'description': '<p>Read the sign</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>"examine"</p><br><p> "go opendoor"</p><hr>',
