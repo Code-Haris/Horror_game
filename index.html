@@ -7,6 +7,7 @@
     <meta author="Haris Kravarevic" />
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="javascript/characters.js"></script>
@@ -14,12 +15,37 @@
     <script type="text/javascript" src="javascript/engine.js"></script>
 
     <title>NoEnd House</title>
+    <!-- Script for automatic scroll to bottom page -->
     <script type="text/javascript">
             var scroll = setInterval(function(){ window.scrollBy(0,1000); }, 2000);
 
     </script>
+<!-- Script for Hamburger menu -->
+
+  
+<!-- End Script -->
+
 </head>
 <body>
+    <header>
+
+        <div class="menu-section">
+  <div class="menu-toggle">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </div>
+  <nav>
+        <ul role="navigation" class="hidden">
+            <li><a href="#">go [direction]</a></li>
+            <li><a href="#">pickup [item]</a></li>
+            <li><a href="#">pickup [item]</a></li>
+            <li><a href="#">equipment</a></li>
+        </ul>
+    </nav>
+</div>
+        
+    </header>
     <div class="container home">
         <!-- <div id="intro">
             <div id="console-text" class="game-info">
@@ -44,7 +70,12 @@
         </div>
 
     </div>
-
+<script type="text/javascript">$(".menu-toggle").on('click', function(e) {
+    console.log(e.target);
+  $(this).toggleClass("on");
+  $('.menu-section').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+});</script>
 
 </body>
 </html>
