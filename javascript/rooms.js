@@ -142,7 +142,7 @@ const rooms = [
 
     reading_sign = new Room({
         'name': 'reading_sign',
-        'description': '<p>Read the sign</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>"examine"</p><br><p> "go opendoor"</p><hr>',
+        'description': '<p>Read the sign</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>"examine"</p><br><p> "go open door"</p><hr>',
         'examineDescription': '<p style="color: #0357ff;">"Room 1 this way. Eight more follow. Reach the end and you win!"</p>',
         'directions': {
             'open door': 'opening_door',
@@ -193,7 +193,7 @@ const rooms = [
         search_something1 = new Room({
         'name': 'search_something1',
         'description': '<p> On the surface, it looked like a normal room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go deep search"</p><hr>',
-        'examineDescription': '<p style="color: #0357ff;">There was a chair in the middle of the wood paneled floor.</p><br><p style="color: #0357ff;"> A single lamp in the corner did a poor job of lighting the area, casting a few shadows across the floor and walls.</p><br><p style="color: #0357ff;">That was the problem. Shadows. Plural.</p><br>',
+        'examineDescription': '<p style="color: #0357ff;">There was a chair in the middle of the wood paneled floor.</p><br><br><p style="color: #0357ff;"> A single lamp in the corner did a poor job of lighting the area,</p><br><p style="color: #0357ff;">  casting a few shadows across the floor and walls.</p><br><br><p style="color: #0357ff;">That was the problem. Shadows. Plural.</p><br>',
 		 'directions': {
             'deep search': 'deep_search',
         },
@@ -261,15 +261,37 @@ const rooms = [
         'npcs': {}
     }),
 
-        //not finished room...
+        
          run_to_door = new Room({
         'name': 'run_to_door',
-        'description': '<p> You get in The fourth room was possibly the most disturbing.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
-        'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p>',
+        'description': '<p> You get in The fourth. Room was possibly the most disturbing.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;"> As I closed the door, </p><br><p>all light seemed to be sucked out and put back into the previous room.</p>',
+		 'directions': {
+            'stay there': 'stay_there',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+		stay_there = new Room({
+        'name': 'stay_there',
+        'description': '<p>  I stood there, surrounded by darkness, not able to move.</p><br><p>I`m not afraid of the dark and never have been,</p><br><p> but I was absolutely terrified.</p><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;"> All sight had left me.</p>',
+		 'directions': {
+            'hear anything': 'hear_anything',
+            'move foward': 'moving_foward'
+        },
+        'items': [],
+        'npcs': {}
+    }),
+		hear_anything = new Room({
+        'name': 'hear_anything',
+        'description': '<p>  I couldn`t hear anything. It was dead silence.</p><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;"> When you`re in a sound-proof room, you can still hear yourself breathing.</p><br><p> You can hear yourself being alive.</p>',
 		 'directions': {
             'run': 'run_to_door',
         },
         'items': [],
         'npcs': {}
     }),
+
 ];
