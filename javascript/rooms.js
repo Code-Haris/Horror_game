@@ -185,7 +185,6 @@ const rooms = [
         'description': '<p> Logic overtook me after a few terrified moments, and I shook it off and entered the next room.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go search"</p><hr>',
         'examineDescription': '<p style="color: #0357ff;">I did not want to open that door. A feeling of dread hit me so hard I could barely even think.</p><br>',
 		 'directions': {
-            'next room': 'next_room',
             'search': 'search_something1'
         },
         'items': [],
@@ -262,10 +261,10 @@ const rooms = [
         'npcs': {}
     }),
 
-        //Came to here with the story
+        //not finished room...
          run_to_door = new Room({
         'name': 'run_to_door',
-        'description': '<p> I looked down as I took my steps and that`s when I saw it.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
+        'description': '<p> You get in The fourth room was possibly the most disturbing.</p><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
         'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p>',
 		 'directions': {
             'run': 'run_to_door',
