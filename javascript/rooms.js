@@ -103,6 +103,17 @@ const rooms = [
         'items': [],
         'npcs': {}
     }),
+    leaving = new Room({
+        'name': 'leaving',
+        'description': '<p><br><br><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><br><p>go open door</p><br><p>go leave now</p><br><p>examine</p><hr>',
+        'examineDescription': '<p style="color: #0357ff;">Noticed something strange about the building.</p><br><p style="color: #0357ff;">Have you ever seen or read something that shouldnt be scary, but for some reason</p><br><p style="color: #0357ff;"> a chill crawls up your spine?</p><br></p>',
+        'directions': {
+            'open door': 'opening_door',
+            'leave now': 'leaving',
+        },
+        'items': [],
+        'npcs': {}
+    }),
 
     opening_door = new Room({
         'name': 'opening_door',

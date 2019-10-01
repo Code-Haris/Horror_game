@@ -60,7 +60,7 @@ function changeRoom(dir) {
 
     if (room[0].directions[dir] !== undefined) {
         currentRoom = room[0].directions[dir];
-        const nextRoom = rooms.filter(roo => roo.name.includes(currentRoom));
+        const nextRoom = rooms.filter(roo => (roo.name.includes(currentRoom))  );
         exportLog(`<h2>${nextRoom[0].name.toUpperCase()}</h2>`);
         exportLog(nextRoom[0].description);
     }
