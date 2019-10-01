@@ -20,10 +20,6 @@
             var scroll = setInterval(function(){ window.scrollBy(0,1000); }, 2000);
 
     </script>
-<!-- Script for Hamburger menu -->
-
-  
-<!-- End Script -->
 
 </head>
 <body>
@@ -46,6 +42,8 @@
 </div>
         
     </header>
+ 
+   
     <div class="container home">
         <!-- <div id="intro">
             <div id="console-text" class="game-info">
@@ -70,12 +68,35 @@
         </div>
 
     </div>
+
+
+    <iframe src="./sound/hauntedhouse.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+<audio autoplay loop  id="playAudio">
+      <source src="./sound/hauntedhouse.mp3">
+    </audio>
+
+
+
 <script type="text/javascript">$(".menu-toggle").on('click', function(e) {
     console.log(e.target);
   $(this).toggleClass("on");
   $('.menu-section').toggleClass("on");
   $("nav ul").toggleClass('hidden');
 });</script>
+
+<!-- Script for audio-->
+   <script>
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() 
+  }
+
+</script>
+
 
 </body>
 </html>

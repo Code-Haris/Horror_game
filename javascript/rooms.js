@@ -213,7 +213,7 @@ const rooms = [
         open_door1 = new Room({
         'name': 'open_door1',
         'description': '<p>I tried to open the door I came through. It was locked from the other side.</p><br>',
-        'examineDescription': '<p style="color: #0357ff;">That set me off. Was someone locking the fucking doors as I progressed?</p><br><p style="color: #0357ff;">There was no way. I would have heard them</p><br><p> I need to <b>think</b> what to do</p>',
+        'examineDescription': '<p style="color: #0357ff;">That set me off. Was someone locking the fucking doors as I progressed?</p><br><p style="color: #0357ff;">There was no way. I would have heard them</p><br> <p style="color: #0357ff;"> I need to <b>think</b> what to do</p>',
 		 'directions': {
             'think': 'think_now',
         },
@@ -233,7 +233,7 @@ const rooms = [
          turn_back = new Room({
         'name': 'turn_back',
         'description': '<p> I turned back to the room and the shadows were gone.</p><br>',
-        'examineDescription': '<p style="color: #0357ff;">The chair`s shadow remained, but the others were gone.</p><br><p>Would like to test this and <b>walk around</b> and see what happend with shadows</p>',
+        'examineDescription': '<p style="color: #0357ff;">The chair`s shadow remained, but the others were gone.</p><br><p style="color: #0357ff;">Would like to test this and <b>walk around</b> and see what happend with shadows</p>',
 		 'directions': {
             'walk around': 'walk_around',
         },
@@ -253,7 +253,7 @@ const rooms = [
         walking_more = new Room({
         'name': 'walking_more',
         'description': '<p> I looked down as I took my steps and that`s when I saw it.</p><br>',
-        'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p><br><p>I`m scared as fuck wanna <b>run</b> from here!</p>',
+        'examineDescription': '<p style="color: #0357ff;">Or didn`t see it. My shadow wasn`t there.</p><br><p style="color: #0357ff;">I`m scared as fuck wanna <b>run</b> from here!</p>',
 		 'directions': {
             'run': 'run_to_door',
         },
@@ -265,7 +265,7 @@ const rooms = [
          run_to_door = new Room({
         'name': 'run_to_door',
         'description': '<p> You get in The fourth. Room was possibly the most disturbing.</p><br>',
-        'examineDescription': '<p style="color: #0357ff;"> As I closed the door, </p><br><p>all light seemed to be sucked out and put back into the previous room.</p><br><p><b>stay there</b> and think what to do next</p>',
+        'examineDescription': '<p style="color: #0357ff;"> As I closed the door, </p><br><p style="color: #0357ff;">all light seemed to be sucked out and put back into the previous room.</p><br><p style="color: #0357ff;"><b>stay there</b> and think what to do next</p>',
 		 'directions': {
             'stay there': 'stay_there',
         },
