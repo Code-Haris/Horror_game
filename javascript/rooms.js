@@ -283,7 +283,7 @@ const rooms = [
         'items': [],
         'npcs': {}
     }),
-		//Come with the story here
+		
 		hear_anything = new Room({
         'name': 'hear_anything',
         'description': '<p>  I couldn`t hear anything. It was dead silence.</p><p><hr><b style="color: #02fa86;">Commands:</b><hr></p><p>"examine"</p><br><p> "go run"</p><hr>',
@@ -294,5 +294,47 @@ const rooms = [
         'items': [],
         'npcs': {}
     }),
+        moving_foward = new Room({
+        'name': 'moving_foward',
+        'description': '<p>I moved few steps and you step on something</p>',
+        'examineDescription': '<p style="color: #0357ff;"> I don`t see almost anything and I`m scared to <b>reach that</b> </p>',
+         'directions': {
+            'hear anything': 'reach_that',
+        },
+        'items': [],
+        'npcs': {}
+    }),
+        reach_that = new Room({
+        'name': 'reach_that',
+        'description': '<p>What is that? It`s flashlight </p>',
+        'examineDescription': '<p style="color: #0357ff;"> Ooh its <b>flashlight</b> </p>',
+         'directions': {
+            'hear anything': 'hear_anything',
+            'move foward': 'moving_foward'
+        },
+        'items': [],
+        'npcs': {}
+    }),
+    corridor = new Room ({
+    'name': 'corridor',
+    'description': '<p>You walk down a narrow corridor. Humming that same song you always hum when you get nervous.</p>',
+    'examineDescription': '<p>You looked around the room but did not find anything.</p>',
+    'directions': {
+        'north': 'clearing1',
+        'south': 'clearing2'
+    },
+    'items': [{ 
+        'name': 'key',
+        'description': 'You see a shiny metalic object in the far distance.',
+        'pickupDes': 'You walked towards the shiny metalic object and found a <b>key</b>!',
+        'taken': false
+    }, {
+        'name':  'bat',
+        'description': 'You see a wooden object with a baseball ingraved onto it.',
+        'pickupDes': 'You walked towards the wooden objet and found a baseball <b>bat</b>!',
+        'taken': false
+    }],
+    'npcs': {}
+}),
 
 ];

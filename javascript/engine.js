@@ -290,9 +290,10 @@ function playerName(input) {
 
 // TODO: Implement audio manager
 function toggleAudio() {
+
+
     // Toggles audio
 }
-
 function intro() {
     exportText('<p style="font-size:150px;color:red">&#9760;</p>'); 
     setTimeout(function () { exportText('<p>Let me start by saying that was addicted to heroin.</p>');}, 300);
