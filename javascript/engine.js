@@ -12,21 +12,7 @@ var txt = 'Lorem ipsum typing effect!';
 speed = 50;
 
 //Testing for saves
-var charName;
-var playerScore;
-var gameResult = {};
-var highscoreList = [];
 
-function toHighscoreList() {
-    charName = $('#nameTag').text();  
-    playerScore = guessedWrong.length;
-
-    gameResult = {player: charName, score: playerScore};
-    highscoreList.push(gameResult);
-    highscoreList.sort(function(a,b) { return (b.score - a.score ) });
-
-    $('#score1').text(highscoreList[0].player + " - score: "+ highscoreList[0].score);
-};
 //End of script. Script dont work but at least there is no error :D :D:D
 
 function typeWriter() {
@@ -249,7 +235,7 @@ function playerInput(input) {
         "name" : "etwas",
         "score" : 2
     }
-    localStorage.setItem('score', JSON.stringify(myObj))
+    localStorage.setItem(player.name, player.moves); // Changed little bit the line --> was making bug before
     $('#status-moves').text(`Moves: ${player.moves}`);
 
     switch(command) {
