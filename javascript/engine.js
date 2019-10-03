@@ -24,7 +24,7 @@ function toHighscoreList() {
 
     $('#score1').text(highscoreList[0].player + " - score: "+ highscoreList[0].score);
 };
-//End without output or error :D :D:D
+//End of script. Script dont work but at least there is no error :D :D:D
 
 function typeWriter() {
     if (i < txt.length) {
