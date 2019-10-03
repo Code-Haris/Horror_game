@@ -6,6 +6,8 @@ const commands = ['go [direction]', 'pickup [item]', 'examine', 'equipment'];
 // SCORES OBJECT
 let leaderboard = []
 
+
+
 /** For typerwriter effect */
 var i = 0;
 var txt = 'Lorem ipsum typing effect!';
