@@ -8,6 +8,23 @@ var i = 0;
 var txt = 'Lorem ipsum typing effect!';
 speed = 50;
 
+//Testing for saves
+var charName;
+var playerScore;
+var gameResult = {};
+var highscoreList = [];
+
+function toHighscoreList() {
+    charName = $('#nameTag').text();  
+    playerScore = guessedWrong.length;
+
+    gameResult = {player: charName, score: playerScore};
+    highscoreList.push(gameResult);
+    highscoreList.sort(function(a,b) { return (b.score - a.score ) });
+
+    $('#score1').text(highscoreList[0].player + " - score: "+ highscoreList[0].score);
+};
+//End without output or error :D :D:D
 
 function typeWriter() {
     if (i < txt.length) {
