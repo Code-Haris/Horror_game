@@ -143,3 +143,20 @@ let player = new Character ({
     'charReady': false,
     'charMoves': 0
 });
+
+class CharacterContainer {
+    constructor() {
+        this.characters = []
+    }
+
+    characterAdd(character) {
+        this.characters.push(character)
+    }
+
+    //getter
+    getCharacters() {
+        console.log(this.characters)
+    }
+}
+
+let characterContainer = new CharacterContainer()

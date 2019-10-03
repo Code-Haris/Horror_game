@@ -3,6 +3,9 @@
 let currentRoom = 'start';
 const commands = ['go [direction]', 'pickup [item]', 'examine', 'equipment'];
 
+// SCORES OBJECT
+let leaderboard = []
+
 /** For typerwriter effect */
 var i = 0;
 var txt = 'Lorem ipsum typing effect!';
@@ -242,6 +245,11 @@ function playerInput(input) {
     const direction = rest.join(' ')
 
     player.moves =+ 1;
+    let myObj = {
+        "name" : "etwas",
+        "score" : 2
+    }
+    localStorage.setItem('score', JSON.stringify(myObj))
     $('#status-moves').text(`Moves: ${player.moves}`);
 
     switch(command) {
@@ -282,6 +290,15 @@ function playerName(input) {
         const upper = input.replace(/^\w/, c => c.toUpperCase());
         player.name = upper;
 
+        localStorage.setItem(player.name, player.moves)
+
+        let playerObj = {
+            "name" : player.name,
+            "score" : player.score
+        }
+
+        leaderboard.push(playerObj)
+
         // TODO: Refactor these appends
         exportText(`<p>You are <b>${player.name}</b> </p>`);
         $('#player-name').attr('placeholder','Please type your command...');
@@ -299,6 +316,7 @@ function playerName(input) {
             exportLog(start.description);
             player.ready = true;
             player.moves =+ 1;
+            localStorage.setItem(player.name, player.moves)
         break;
         default:
             $('#console-text1').append(`<p>Invalid command</p>`);
