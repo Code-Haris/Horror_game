@@ -6,7 +6,11 @@ const commands = ['go [direction]', 'pickup [item]', 'examine', 'equipment'];
 // SCORES OBJECT
 let leaderboard = []
 
-
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+  // Great success! All the File APIs are supported.
+} else {
+  alert('The File APIs are not fully supported in this browser.');
+}
 
 /** For typerwriter effect */
 var i = 0;
@@ -14,7 +18,7 @@ var txt = 'Lorem ipsum typing effect!';
 speed = 50;
 
 //Testing for saves
-
+ 
 //End of script. Script dont work but at least there is no error :D :D:D
 
 function typeWriter() {
