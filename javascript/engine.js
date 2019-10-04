@@ -18,7 +18,13 @@ var txt = 'Lorem ipsum typing effect!';
 speed = 50;
 
 //Testing for saves
- 
+
+
+
+
+
+
+
 //End of script. Script dont work but at least there is no error :D :D:D
 
 function typeWriter() {
@@ -85,7 +91,7 @@ function changeRoom(dir) {
  * Show the help menu
  */
 function showHelp() {
-    exportLog('<p><b>Here is the help: </b></p><br><br><p>go [direction]</p><br><p>pickup [item]</p><br><p>examine</p><br><p>equipment</p>');
+    exportLog('<p><b>Here is the help: </b></p><br><br><p>go [direction]</p><br><p>pickup [item]</p><br><p>examine</p><br><p>equipment</p><br><p>Equip (right or left) item</p>');
     exportLog('<p><ul>');
     for (let i = 0; i < commands.length; i++) {
         exportLog(`<li> ${commands[i]} </li>`);
@@ -158,11 +164,18 @@ function showInventory() {
     }
 
     exportLog('<p>Here is your inventory: </p>');
-    exportLog('<p><ul>');
-    for (let i = 0; i < player.inventory.length; i++) {
-        exportLog(`<li> ${player.inventory[i]} </li>`);
+    exportLog('<p>');
+    console.log("Fuck you: " + player.inventory)
+
+    // Master Fred
+    for (item of player.inventory) {
+        exportLog(`<h4 style="color: cyan;"> ${item}</h4><br>`)
     }
-    exportLog('</ul></p>');
+
+    //for (let i = 0; i < player.inventory.length; i++) {
+    //    exportLog(`<li> ${player.inventory[i]} </li>`);
+    //}
+    //exportLog('</p>');
 }
 /**
  * equipItem
