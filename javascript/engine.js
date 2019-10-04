@@ -70,9 +70,11 @@ function exportText(value) {
  * Changes the room
  * @param  {} dir
  */
+
 function changeRoom(dir) {
 
     const cr = currentRoom;
+    currentroomX = cr;
 
     const room = rooms.filter(roo => roo.name.includes(cr));
 
@@ -185,8 +187,18 @@ function showInventory() {
  * @param  {} hand
  * @param  {} item
  */
-function equipItem(hand, item) {
+
+let isEquipped = false;
+
+function equipItem(hand, item, dir) {
     let inven = [];
+    console.log()
+
+    //let currentroomTHIS = rooms.filter(room => room.name.includes(dir))
+    //currentroomTHIS[0].directions.isEquipped = true
+
+    //console.log(currentroomTHIS[0].directions.isEquipped)
+    isEquipped = true;
 
     // Push the item to inven if it is in the inventory
     player.charInventory.forEach(function (element) {
@@ -280,7 +292,7 @@ function playerInput(input) {
         case 'equip':
             const hand = input.split(' ')[1];
             const itm = input.split(' ')[2];
-            equipItem(hand, itm);
+            equipItem(hand, itm, dir);
         break;
         case 'equipment':
             showEquipment();
