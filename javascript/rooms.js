@@ -10,6 +10,16 @@ class Room {
         this.npcs = params.npcs;
     }
 }
+
+class RoomContainer {
+    constructor() {
+        this.rooms = []
+    }
+
+    addRoom(room) {
+        this.rooms.push(room)
+    }
+}
 // Example Room
 // corridor = new Room ({
 //     'name': 'corridor',
@@ -346,3 +356,9 @@ const rooms = [
 
 
 ];
+
+let roomContainer = new RoomContainer()
+
+for ( let item of rooms ) {
+    roomContainer.addRoom(item)
+}

@@ -3,6 +3,10 @@
 let currentRoom = 'start';
 const commands = ['go [direction]', 'pickup [item]', 'examine', 'equipment'];
 
+// IMPORT FAKIN ROOM
+import RoomContainer from "./rooms.js"
+console.log(RoomContainer)
+
 // SCORES OBJECT
 let leaderboard = []
 
@@ -188,7 +192,7 @@ function showInventory() {
  * @param  {} item
  */
 
-let isEquipped = false;
+let isEquipped = true;
 
 function equipItem(hand, item, dir) {
     let inven = [];
