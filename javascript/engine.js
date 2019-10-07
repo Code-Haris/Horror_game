@@ -188,18 +188,22 @@ function showInventory() {
  * @param  {} item
  */
 
-let isEquipped = true;
+let isEquipped = false;
 
 function equipItem(hand, item, dir) {
     let inven = [];
-    console.log()
+
+    isEquipped = true
+
+
+    let newObj = ifTestSomething()            
+    rooms[1].directions = {...newObj, ...rooms[1].directions}
+    console.log(rooms[1].directions)
 
     //let currentroomTHIS = rooms.filter(room => room.name.includes(dir))
     //currentroomTHIS[0].directions.isEquipped = true
 
     //console.log(currentroomTHIS[0].directions.isEquipped)
-    isEquipped = true;
-
     // Push the item to inven if it is in the inventory
     player.charInventory.forEach(function (element) {
         if (element === item) {
@@ -248,6 +252,21 @@ function showEquipment() {
     }
 }
 
+// TES TEST TEST TEST TEST
+function ifTestSomething() {
+    if(isEquipped) {
+        let newObj = {
+            "behind me" : "somewhere_else"
+        }
+        return newObj
+    } else {
+        let newObj = {
+            "behind me" : "behind_me"
+        }
+        return newObj
+    }
+}
+
 /**
  * Get the room and change it
  * @param  {} input
@@ -260,6 +279,13 @@ function playerInput(input) {
     const command = a
     console.log(command)
     const direction = rest.join(' ')
+    const roomdir = rest.join('_')
+    console.log(typeof roomdir)
+    let newObj = { 
+        [direction] : roomdir,
+    }      
+    rooms[1].directions = {...newObj, ...rooms[1].directions}
+    console.log(rooms[1].directions)
 
     player.moves =+ 1;
     let myObj = {
@@ -275,6 +301,8 @@ function playerInput(input) {
             dir = direction
             console.log(dir)
             changeRoom(dir);
+            
+            
         break;
         case 'help':
             showHelp();

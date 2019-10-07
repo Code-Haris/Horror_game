@@ -322,8 +322,7 @@ const rooms = [
     'examineDescription': '',
     'directions': {
         //'isEquipped' : false,
-        'behind me': isEquipped ? "behind_me" : "somewhere_else",
-        '#': '#'
+        '#': '#',
     },
     'items': [{ 
         'name': 'flashlight',
@@ -333,7 +332,7 @@ const rooms = [
     }],
     'npcs': {}
 }),
-         behind_me = new Room({
+         new_room = new Room({
         'name': 'behind_me',
         'description': '<p>I felt something behind me.</p><br><p>I spun around wildly but could barely even see my nose.</p><br><p>I knew it was there, though.</p>',
         'examineDescription': '<p style="color: #0357ff;">Regardless of how dark it was, I knew something was there.</p><br><p style="color: #0357ff;">Good I have flashlight, maybe should <b>exuip</b></p><br>',
@@ -343,7 +342,7 @@ const rooms = [
         'items': [],
         'npcs': {}
     }),
-         somewhere_else = new Room({
+         new_else = new Room({
         'name': 'somewhere_else',
         'description': '<p>I felt something behind me.</p><br><p>I spun around wildly but could barely even see my nose.</p><br><p>I knew it was there, though.</p>',
         'examineDescription': '<p style="color: #0357ff;">Regardless of how dark it was, I knew something was there.</p><br><p style="color: #0357ff;">Good I have flashlight, maybe should <b>exuip</b></p><br>',
@@ -361,4 +360,10 @@ let roomContainer = new RoomContainer()
 
 for ( let item of rooms ) {
     roomContainer.addRoom(item)
+}
+
+class Insurance {
+    constructor(name) {
+        this.name = name
+    }
 }
