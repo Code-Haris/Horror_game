@@ -327,7 +327,7 @@ const rooms = [
     'items': [{
         'name': 'flashlight',
         'description': '<img src="./img/flashlight.png" alt="flashlight" style="width:100px;height:100px;">',
-        'pickupDes': '<p style="color: #0357ff;">you picked up a flashlight! </p><br><p style="color: #0357ff;">I felt something <b>behind me</b></p> ',
+        'pickupDes': '<p style="color: #0357ff;">you picked up a flashlight! </p><br><p style="color: #0357ff;">I felt something <b>behind me</b></p><br><p>DONT USE EQUIP AT THIS MOMENT!</p> ',// Need later to remove the info about equip item
         'taken': false,
     }],
     'npcs': {}
