@@ -334,7 +334,7 @@ const rooms = [
 }),
          behind_me = new Room({
         'name': 'behind_me',
-        'description': '<p>I spun around wildly but could barely even see my nose.</p><br><p>I knew it was there, though.</p>',
+        'description': '<p>---> This is the end , didnt wrote more for this line of the story<---- </p><br><p>--->To continue game you dont equip flashlight<---</p><br><p>I spun around wildly but could barely even see my nose.</p><br><p>I knew it was there, though.</p>',
         'examineDescription': '<p style="color: #0357ff;">Regardless of how dark it was, I knew something was there.</p><br><p style="color: #0357ff;">Good I have flashlight, maybe should <b>exuip</b></p><br>',
          'directions': {
             'closer': 'around_me',
