@@ -517,13 +517,35 @@ heard_it = new Room({
 'items': [],
 'npcs': {}
 }),
-// WROTE TILL HERE!! CONTINURE FROM HERE!
+
 coming_from = new Room({
 'name': 'coming_from',
-'description': '<p> The low hum from before. </p><br><p>It was <b>coming from</b> the next room and it was deeper.</p><br><p> I could almost feel it inside my body,</p><br><p> like when you stand next to an amp at a concert. </p>',
-'examineDescription': '<p style="color: #0357ff;">The feeling of the bugs on me lessened as the hum grew louder.</p>',
+'description': '<p>As I placed my hand on the doorknob </p><br><p> the bugs were completely gone but I couldn`t bring myself to turn the knob.</p>',
+'examineDescription': '<p style="color: #0357ff;"> if I let go, the bugs would return and </p><br><p style="color: #0357ff;">there was no way I would make it back to room four. I just <b>stay there</b>.</p>',
 'directions': {
-   '...': '...',
+   'stay there': 'stay_there',
+},
+'items': [],
+'npcs': {}
+}),
+stay_there = new Room({
+'name': 'stay_there',
+'description': '<p>I just stood there, my head pressed against the door marked six and my hand shakily grasping the knob.</p>',
+'examineDescription': '<p style="color: #0357ff;">The hum was so loud I couldn`t even hear myself pretend to think. </p><br><p style="color: #0357ff;">There was nothing I could do but <b>move on</b>. Room six was next, and room six was Hell.</p>',
+'directions': {
+   'move on': 'move_on',
+},
+'items': [],
+'npcs': {}
+}),
+
+// CONTINUE FROM THIS POINT!
+move_on = new Room({
+'name': 'move_on',
+'description': '<p>I wrote story till this point. We will continue working on the game, thank you for understanding</p>',
+'examineDescription': '<p style="color: #0357ff;">Soon will be more</p>',
+'directions': {
+   'move on': 'move_on',
 },
 'items': [],
 'npcs': {}
