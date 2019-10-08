@@ -308,7 +308,7 @@ const rooms = [
         moving_foward = new Room({
         'name': 'moving_foward',
         'description': '<p>I moved few steps and you step on something</p>',
-        'examineDescription': '<p style="color: #0357ff;"> I don`t see almost anything and I`m scared to <b>reach that</b> </p>',
+        'examineDescription': '<p style="color: #0357ff;"> I don`t see almost anything and I`m scared to <b>touch it</b> </p>',
          'directions': {
             'touch it': 'reach_that',
         },
