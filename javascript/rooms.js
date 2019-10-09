@@ -8,6 +8,7 @@ class Room {
         this.directions = params.directions;
         this.items = params.items;
         this.npcs = params.npcs;
+
     }
 }
 
@@ -316,6 +317,11 @@ const rooms = [
         'npcs': {}
     }),
 
+    //why the fuck need to comment till this point to make this game work??
+    //TODO: DELETE EVERYTHING!
+    //Thought this will be interesting and now it start to be pain in the ass!!
+
+
     reach_that = new Room ({
     'name': 'reach_that',
     'description': '<p>What is that? hmm.. ',
@@ -329,10 +335,11 @@ const rooms = [
         'description': '<img src="./img/flashlight.png" alt="flashlight" style="width:100px;height:100px;">',
         'pickupDes': '<p style="color: #0357ff;">you picked up a flashlight! </p><br><p style="color: #0357ff;">I felt something <b>behind me</b></p><br><p>DONT USE EQUIP AT THIS MOMENT!</p> ',// Need later to remove the info about equip item
         'taken': false,
-        '#':'#'
+        '#': '#',
     }],
     'npcs': {}
 }),
+
          behind_me = new Room({
         'name': 'behind_me',
         'description': '<p>---> This is the end , didnt wrote more for this line of the story<---- </p><br><p>--->To continue game you dont equip flashlight<---</p><br><p>I spun around wildly but could barely even see my nose.</p><br><p>I knew it was there, though.</p>',
@@ -348,7 +355,7 @@ const rooms = [
         'description': '<p>I know that something was behind me,</p><br><p>Good that I found this flashlight now I can see a little bit in this dark room</p>',
         'examineDescription': '<p style="color: #0357ff;">Regardless of how dark it was, I knew something was there.</p><br><p style="color: #0357ff;">Good I have flashlight, maybe should <b>exuip</b></p><br>',
          'directions': {
-            'touch it': 'reach_that',
+            'around me': 'around_me',
         },
         'items': [],
         'npcs': {}
@@ -363,8 +370,8 @@ const rooms = [
    'items': [],
    'npcs': {}
 }),
-around_me = new Room({
-'name': 'around_me',
+lights_on = new Room({
+'name': 'lights_on',
 'description': '<p> I turn light on, Then the lights flashed for a second and I saw it.</p>',
 'examineDescription': '<p style="color: #0357ff;"> Nothing. I saw nothing and I know I saw nothing there.</p><br><p style="color: #0357ff;"> The room was again plunged into</p><br><p style="color: #0357ff;"> darkness and the hum became a wild screech. I`m scared wanna <b>scream</b></p>',
 'directions': {

@@ -50,7 +50,7 @@ function exportLog(value) {
     // $('#console-text').append(value);
     // txt = value;
     // typeWriter();
-    
+
     let content = document.querySelector('#console-text');
     let text = document.createElement('p');
     text.classList.add('typewriter');
@@ -115,7 +115,7 @@ function examineRoom() {
     }
 
     let items = [];
-    
+
     // Check each element for an object and return the object's description.
     room[0].items.forEach(function(element) {
         if (element.taken === false) {
@@ -149,8 +149,8 @@ function pickup(name) {
             item.push(element.name);
             exportLog(`<p>${element.pickupDes}</p>`);
         }
-    }); 
-    
+    });
+
     if (item === undefined || item.length <= 0) {
         return exportLog(`<p>You looked for a <b>${name}</b> and could not find it.</p>`);
     }
@@ -181,9 +181,9 @@ function showInventory() {
 }
 /**
  * equipItem
- * Equip's an item from the inventory 
+ * Equip's an item from the inventory
  * specified by the user
- * 
+ *
  * @param  {} hand
  * @param  {} item
  */
@@ -196,7 +196,7 @@ function equipItem(hand, item, dir) {
     isEquipped = true
 
 
-    let newObj = ifTestSomething()            
+    let newObj = ifTestSomething()
     rooms[1].directions = {...newObj, ...rooms[1].directions}
     console.log(rooms[1].directions)
 
@@ -280,10 +280,10 @@ function playerInput(input) {
     console.log(command)
     const direction = rest.join(' ')
     const roomdir = rest.join('_')
-    console.log(typeof roomdir)
-    let newObj = { 
+    console.log(roomdir)
+    let newObj = {
         [direction] : roomdir,
-    }      
+    }
     rooms[1].directions = {...newObj, ...rooms[1].directions}
     console.log(rooms[1].directions)
 
@@ -301,8 +301,8 @@ function playerInput(input) {
             dir = direction
             console.log(dir)
             changeRoom(dir);
-            
-            
+
+
         break;
         case 'help':
             showHelp();
@@ -375,7 +375,7 @@ function toggleAudio() {
     // Toggles audio
 }
 function intro() {
-    exportText('<p style="font-size:150px;color:red">&#9760;</p>'); 
+    exportText('<p style="font-size:150px;color:red">&#9760;</p>');
     setTimeout(function () { exportText('<p>Let me start by saying that was addicted to heroin.</p>');}, 300);
     setTimeout(function () { exportText('<p>We were friends in college and continued to be after I graduated</p>');}, 300);
     setTimeout(function () { exportText('<p>We were friends in college and continued to be after I graduated</p>');}, 300);
