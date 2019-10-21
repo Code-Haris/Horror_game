@@ -197,8 +197,8 @@ function equipItem(hand, item, dir) {
 
 
     let newObj = ifTestSomething()
-    rooms[1].directions = {...newObj, ...rooms[1].directions}
-    console.log(rooms[1].directions)
+    rooms[25].directions = {...newObj, ...rooms[25].directions}
+    console.log(rooms[25].directions)
 
     //let currentroomTHIS = rooms.filter(room => room.name.includes(dir))
     //currentroomTHIS[0].directions.isEquipped = true
@@ -254,6 +254,7 @@ function showEquipment() {
 
 // TES TEST TEST TEST TEST
 function ifTestSomething() {
+    console.log(isEquipped)
     if(isEquipped) {
         let newObj = {
             "behind me" : "somewhere_else"
@@ -299,6 +300,9 @@ function playerInput(input) {
         case 'go':
             //const dir = input.split(" ")[1];
             dir = direction
+            let newObj = ifTestSomething()
+            rooms[25].directions = {...newObj, ...rooms[25].directions}
+            console.log(rooms[25].directions)
             console.log(dir)
             changeRoom(dir);
 
